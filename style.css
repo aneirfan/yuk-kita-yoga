@@ -1,0 +1,420 @@
+/*warna*/
+:root {
+  --putih: #f0f0f0;
+  --merah: #bf263b; /*#be3144;*/
+  --biru: #192b55; /*#45567d;*/
+  --abu: #293139; /*#303841;*/
+}
+
+/*reset*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.8rem; /* 18px */
+  font-weight: 400;
+  line-height: 1.4;
+  color: var(--putih);
+}
+
+h1,
+h2 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  text-align: center;
+}
+
+h1 {
+  font-size: 6rem;
+}
+
+h2 {
+  font-size: 4.2rem;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--putih);
+}
+
+img {
+  border-style: none;
+  max-width: 100%;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+article,
+aside,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section {
+    display: block;
+}
+
+.section {
+  position: relative;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.img-logo {
+  max-width: 100%;
+  height: auto;
+}
+
+.teks-tengah {
+  text-align: center;
+}
+
+/*Navigasi*/
+.nav {
+  display: flex;
+  justify-content: flex-end;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--merah);
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
+  z-index: 9;
+}
+
+.nav-list {
+  display: flex;
+  margin-right: 2rem;
+}
+
+@media (max-width: 28.75em) {
+  .nav {
+    justify-content: center;
+  }
+
+  .nav-list {
+    margin: 0 1rem;
+  }
+}
+
+.nav-list a {
+  display: block;
+  font-size: 2.2rem;
+  padding: 2rem;
+}
+
+.nav-list a:hover {
+  background: var(--biru);
+}
+
+.bg-biru-gelap {
+  background: linear-gradient(87deg, #426bb3 0, #1a174d 100%) !important;
+}
+
+.row {
+  display: flex;
+  margin-right: -15px;
+  margin-left: -15px; 
+  flex-wrap: wrap;
+}
+
+.i-col {
+  position:relative;
+  float:left;
+  width:100%;
+  min-height:1px;
+  padding-left:10px;
+  padding-right:10px
+}
+
+.i-col-4 {
+  max-width: 33.33333%;
+  flex: 0 0 33.33333%;
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.i-col-12 {
+  width:100%;
+}
+
+.container {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto; 
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+@media (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+}
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1040px;
+    }
+}
+
+/*Tentang*/
+.tentang-class {
+  min-height:728px!important;
+  color:#fff;
+  padding-top:11em;
+  width:100%;
+  background:linear-gradient(rgba(27, 66, 106, 0.35),rgba(8, 24, 40, 0.75)),url(img/yoga.jpg), no-repeat;
+  background-position:top;
+  background-size: cover;
+}
+
+.teks-tentang {
+  font-size: 4rem;
+  font-weight: 300;
+  line-height: 1.7;
+  margin-top: 1.5rem;
+  color: #fff;
+}
+
+/*Kelas*/
+.kelas-class {
+  min-height:728px!important;
+  text-align: center;
+  width:100%;
+  background: var(--merah);
+}
+
+.kelas-header {
+  max-width: 640px;
+  margin: 0 auto 6rem auto;
+  border-bottom: 0.2rem solid var(--putih);
+}
+
+.kelas-class .icon svg {
+  width: 150px;
+  margin: 10px 0;
+}
+
+.kelas-icon {
+  background: var(--abu);
+  border-radius: 20px;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.kelas-icon:hover {
+  transition: all .15s ease; 
+  transform: translateY(-20px);
+}
+
+.kelas-desc {
+  padding: 10px;
+  color: #fff;
+  font-size: 24px;
+}
+
+@media (max-width: 768px) {
+  #navkelas {
+    display: none;
+  }
+
+  .kelas-class {
+    display: none;
+  }
+}
+
+/* Instruktur */
+.instruk-header {
+  max-width: 640px;
+  margin: 0 auto 6rem auto;
+  border-bottom: 0.2rem solid var(--putih);
+}
+
+.instruktur {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border: .0625rem solid rgba(0, 0, 0, .05);
+  border-radius: .25rem;
+  word-wrap: break-word;
+  min-width: 0;
+  background-color: #fff;
+  background-clip: border-box;
+}
+.instruktur:hover {
+  transition: all .15s ease; 
+  transform: translateY(-20px);
+}
+
+.instruk-padding  {
+  padding: 1.5rem;
+}
+
+.teks-hijau
+{
+  color: #2dce89 !important;
+}
+
+.teks-hitam
+{
+  color: #000 !important;
+}
+
+.nama {
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  line-height: 2;
+}
+
+/* Kontak*/
+.kontak-class {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  background: var(--abu);
+}
+
+.kontak-header > h2 {
+  font-size: 6rem;
+}
+
+@media (max-width: 28.75em) {
+  .kontak-header > h2 {
+    font-size: 4rem;
+  }
+}
+
+.kontak-header > p {
+  font-style: italic;
+}
+
+.bulat {
+  border-radius: 50% !important;
+}
+
+.profil-cs {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+}
+
+.profil-cs img {
+  transition: all 0.25s ease;
+}
+
+.profil-cs img:hover {
+  transform: translateX(8px);
+}
+
+.tmbl {
+  font-weight: 600;
+  line-height: 1.5;
+  display: inline-block;
+  position: relative;
+  transition: all .15s ease;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  will-change: transform;
+  margin-top: 1.5rem;
+  padding: .625rem 1.25rem;
+  color: #525f7f;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+  background-color: transparent;
+}
+
+.tmbl:hover {
+  transform: translateY(-5px);
+}
+
+.tmbl-hijau {
+  color: #fff;
+  border-color: #0aa261;
+  background-color: #0aa261;
+}
+.tmbl-hijau:hover {
+  color: #000;
+  border-color: #12995f; 
+  background-color: #12995f;
+}
+
+.sosmed {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-top: 4rem;
+  max-width: 980px;
+}
+
+.link-sosmed {
+  display: inline-block;
+  font-size: 2.4rem;
+  text-shadow: 2px 2px 1px #1f1f1f;
+  border-radius: 2px;
+  padding: 1rem 2rem;
+  transition: transform 0.4s ease-out;
+}
+
+.link-sosmed:hover {
+  transform: translateY(10px);
+}
+
+/*Footer*/
+footer {
+  font-weight: 300;
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  background: var(--abu);
+  border-top: 4px solid var(--merah);
+}
+
+footer > p {
+  margin: 1rem;
+}
+
+@media (max-width: 28.75em) {
+  footer {
+    flex-direction: column;
+    text-align: center;
+  }
+}
