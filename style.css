@@ -88,7 +88,7 @@ section {
 }
 
 .teks-tengah {
-  text-align: center;
+  text-align: center !important;
 }
 
 /*Navigasi*/
@@ -152,6 +152,15 @@ section {
 .i-col-4 {
   max-width: 33.33333%;
   flex: 0 0 33.33333%;
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.i-col-6 {
+  max-width: 50%;
+  flex: 0 0 50%;
   position: relative;
   width: 100%;
   padding-right: 15px;
@@ -301,17 +310,18 @@ section {
 
 /* Kontak*/
 .kontak-class {
-  display: flex;
+  /*display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: center;*/
   text-align: center;
   width: 100%;
   background: var(--abu);
 }
 
 .kontak-header > h2 {
-  font-size: 6rem;
+  font-size: 4rem;
+  padding-top: 50px;
 }
 
 @media (max-width: 28.75em) {
@@ -398,7 +408,9 @@ section {
   transform: translateY(10px);
 }
 
+/*---------------------------------------------------------------------------------*/
 /*Footer*/
+/*---------------------------------------------------------------------------------*/
 footer {
   font-weight: 300;
   padding: 2rem;
